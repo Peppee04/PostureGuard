@@ -29,3 +29,7 @@ data/*
 # Saved calibrations
 calibrations/*
 !calibrations/.gitkeep
+
+# PyInstaller
+build/
+dist/

@@ -6,6 +6,8 @@ import time
 import threading
 import json
 import os
+import sys
+
 from collections import deque
 
 from winotify import Notification
@@ -17,7 +19,16 @@ from PIL import Image, ImageDraw
 # CONFIGURAZIONE
 # ============================================================
 
-MODEL_PATH = "models/pose_landmarker_full.task"
+if getattr(sys, "frozen", False):
+    BASE_DIR = sys._MEIPASS
+else:
+    BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+
+MODEL_PATH = os.path.join(
+    BASE_DIR,
+    "models",
+    "pose_landmarker_full.task"
+)
 CALIBRATIONS_DIR = "calibrations"
 
 CAMERA_INDEX = 0
