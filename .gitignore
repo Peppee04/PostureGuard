@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# IDE
+.vscode/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Project data
+data/*
+!data/.gitkeep
+
+# Logs
+*.log
+
+# MediaPipe models
+models/*.task
+
+# Saved calibrations
+calibrations/*
+!calibrations/.gitkeep
