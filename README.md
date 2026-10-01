@@ -56,24 +56,6 @@ A moving average is applied to the measurements to reduce the effect of short-te
 
 If the user's posture remains below the calibrated threshold for longer than the configured duration, PostureGuard activates an alarm and sends a Windows notification.
 
-## Project Structure
-
-```text
-PostureGuard/
-├── src/
-│   └── main.py
-├── tests/
-├── data/
-│   └── .gitkeep
-├── models/
-│   ├── .gitkeep
-│   └── pose_landmarker_full.task
-├── calibrations/
-│   └── .gitkeep
-├── .gitignore
-├── README.md
-└── environment.yml
-```
 
 ## Requirements
 
@@ -90,33 +72,22 @@ PostureGuard/
 
 ## Installation
 
-Create the Conda environment:
+Clone the repository:
 
-```bash
-conda env create -f environment.yml
-```
+git clone https://github.com/Peppee04/PostureGuard.git
+cd PostureGuard
 
-Activate it:
+Then run:
 
-```bash
-conda activate postureguard
-```
+install.bat
 
-Download the required MediaPipe pose model and place it in:
-
-```text
-models/pose_landmarker_full.task
-```
+The script will create the required Conda environment.
 
 ## Running the Application
 
-From the project root:
+After installation, simply run:
 
-```bash
-python src/main.py
-```
-
-PostureGuard will open the webcam and start the application.
+run.bat
 
 ## Controls
 
